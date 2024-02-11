@@ -8,8 +8,8 @@
     <p>
         <?php
         class Food {
-            public $name;
-            public $price;
+            private $name;
+            private $price;
             public function show_price() {
                 echo $this->price . '<br>';
             }
@@ -45,5 +45,6 @@
     </p>
 </body>
 </html>
+
 
 

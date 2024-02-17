@@ -8,12 +8,21 @@
     <p>
         <?php
         class Food {
-            public $name;
-            public $price;
+            private $name;
+            private $price;
+
             public function show_price() {
-                $this->price = 250;
                 echo $this->price . '<br>';
             }
+
+            public function get_name() {
+                return $this->name;
+            }
+
+            public function get_price() {
+                return $this->price;
+            }
+
             public function __construct(string $name, int $price) {
                 $this->name = $name;
                 $this->price = $price;
@@ -27,10 +36,23 @@
             public $name;
             public $height;
             public $weight;
+
             public function show_height() {
-                $this->height = 60;
                 echo $this->height . '<br>';
             }
+
+            public function get_name() {
+                return $this->name;
+            }
+
+            public function get_height() {
+                return $this->height;
+            }
+
+            public function get_weight() {
+                return $this->weight;
+            }
+
             public function __construct(string $name, int $height, string $weight) {
                 $this->name = $name;
                 $this->height = $height;
@@ -42,10 +64,10 @@
         echo '<br>';
         $food->show_price();
         $animal->show_height();
-        
         ?>
     </p>
 </body>
 </html>
+
 
 
